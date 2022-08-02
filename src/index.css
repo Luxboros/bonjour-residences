@@ -120,26 +120,27 @@ p {
 	}
 
 	p {
+		font-family: "SuisseEDUIntl", serif;
 		font-size: 16px;
+		letter-spacing: 0;
 	}
 
 	.highligted {
+		font-family: "SuisseEDUInt", serif;
 		font-size: 20px;
+	}
+
+	main, aside, #quotebox, footer {
+		padding: 0 30px;
+
 	}
 }
 
-
-main > div {
-	/*align-items: flex-start;*/
-	display: flex;
-	/*justify-content: flex-start;*/
-	width: 100%;
-}
 
 main, aside, #quotebox, footer {
 	margin: 50px auto;
 	max-width: 1500px;
-	width: 100%;
+	width: calc(100% - 60px);
 
 }
 

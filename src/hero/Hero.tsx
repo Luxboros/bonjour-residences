@@ -1,5 +1,7 @@
+import { useAtom } from "jotai";
 import React from "react";
 import { Link } from "react-router-dom";
+import { isMobileAtom } from "../App";
 import { ReactComponent as PlayButton } from "../lib/svgs/circle-play-solid.svg";
 
 const links = [
@@ -14,26 +16,40 @@ const links = [
 ];
 
 export const Hero = () => {
+  const [isMobile] = useAtom(isMobileAtom);
   return (
-    <main>
+    <main
+      style={{
+        display: isMobile ? "flex" : "block",
+        flexDirection: "column",
+        marginTop: isMobile ? 100 : "auto",
+      }}
+    >
       <p
         style={{
-          color: "#767776",
+          color: isMobile ? "#000000" : "#767776",
+          paddingTop: isMobile ? 50 : "auto",
         }}
       >
         À propos
       </p>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: isMobile ? "column" : "row",
+          width: "100%",
+        }}
+      >
         <div
           style={{
-            width: "50%",
+            width: isMobile ? "100%" : "50%",
           }}
         >
           <h1
             style={{
               paddingTop: 0,
-              marginTop: 0,
-              position: "relative",
+              marginTop: isMobile ? 30 : 0,
+              position: isMobile ? "static" : "relative",
               top: "-10px",
             }}
           >
@@ -45,7 +61,7 @@ export const Hero = () => {
             className={"highligted"}
             style={{
               fontFamily: "SuisseEDUIntlLight",
-              paddingRight: "30px",
+              paddingRight: isMobile ? 0 : 30,
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
@@ -64,7 +80,8 @@ export const Hero = () => {
               style={{
                 fontStyle: "bold",
                 fontFamily: "SuisseEDUIntl",
-                paddingBottom: 20,
+                fontSize: isMobile ? 24 : undefined,
+                paddingBottom: isMobile ? 0 : 20,
               }}
             >
               Découvrez également :
@@ -73,6 +90,7 @@ export const Hero = () => {
               style={{
                 display: "flex",
                 justifyContent: "space-between",
+                paddingBottom: isMobile ? 50 : undefined,
               }}
             >
               {links.map(({ to, text }, index) => (
@@ -102,10 +120,11 @@ export const Hero = () => {
 };
 
 const HeroVideo = () => {
+  const [isMobile] = useAtom(isMobileAtom);
   return (
     <div
       style={{
-        width: "50%",
+        width: isMobile ? "100%" : "50%",
       }}
     >
       <img
