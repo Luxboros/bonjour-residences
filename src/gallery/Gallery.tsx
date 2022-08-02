@@ -1,4 +1,6 @@
+import { useAtom } from "jotai";
 import React, { useState } from "react";
+import { isMobileAtom } from "../App";
 import img5 from "../lib/images/20191115_193621.jpg";
 import img3 from "../lib/images/CB-08812.jpg";
 import img2 from "../lib/images/CB-09487.jpg";
@@ -44,13 +46,15 @@ const images: ImageProps[][] = [
 ];
 const Image = ({ src, alt }: ImageProps) => {
   const [isHover, setIsHover] = useState(false);
+  const isMobile = useAtom(isMobileAtom);
   return (
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       style={{
         borderRadius: 10,
-        width: "30%",
+        width: isMobile ? "100%" : "30%",
+        height: isMobile ? `calc(${window.screen.width}-60px)` : undefined,
         margin: "10px auto",
         position: "relative",
       }}
@@ -100,6 +104,7 @@ const Image = ({ src, alt }: ImageProps) => {
   );
 };
 export const Gallery = () => {
+  const [isMobile] = useAtom(isMobileAtom);
   return (
     <div
       style={{
@@ -111,27 +116,37 @@ export const Gallery = () => {
       <aside>
         <h2
           style={{
-            paddingTop: 50,
+            paddingTop: isMobile ? undefined : 50,
+
             textAlign: "center",
           }}
         >
           Bonjour Résidences en images
         </h2>
-        {images.map((row, i) => (
-          <div
-            key={i}
-            style={{
-              ...shouldBeToTheLeft(i),
+        {images.map((row, i) => {
+          if (isMobile && !!i) return undefined;
+          return (
+            <div
+              key={i}
+              style={
+                isMobile
+                  ? {
+                      width: "100%",
+                    }
+                  : {
+                      ...shouldBeToTheLeft(i),
 
-              display: "flex",
-              width: "75%",
-            }}
-          >
-            {row.map((image, j) => (
-              <Image key={j} src={image.src} alt={image.alt} />
-            ))}
-          </div>
-        ))}
+                      display: "flex",
+                      width: "75%",
+                    }
+              }
+            >
+              {row.map((image, j) => (
+                <Image key={j} src={image.src} alt={image.alt} />
+              ))}
+            </div>
+          );
+        })}
       </aside>
     </div>
   );
