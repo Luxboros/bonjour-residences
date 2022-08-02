@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bonjour-residences/static/css/main.1949369e.css",
-    "main.js": "/bonjour-residences/static/js/main.d0fd295e.js",
+    "main.css": "/bonjour-residences/static/css/main.8f1175e3.css",
+    "main.js": "/bonjour-residences/static/js/main.3fc37c82.js",
     "static/media/CB-06189.jpg": "/bonjour-residences/static/media/CB-06189.464049de7a5665d1699c.jpg",
     "static/media/CB-09487.jpg": "/bonjour-residences/static/media/CB-09487.f973e572f720872d578c.jpg",
     "static/media/Casual-seniors-441520.jpg": "/bonjour-residences/static/media/Casual-seniors-441520.585c5a719ed2265d8bef.jpg",
@@ -29,11 +29,13 @@
     "index.html": "/bonjour-residences/index.html",
     "static/media/circle-play-solid.svg": "/bonjour-residences/static/media/circle-play-solid.e9088c48b8b9128b5703fc53b9784bc1.svg",
     "static/media/arrow-right-long-thin.svg": "/bonjour-residences/static/media/arrow-right-long-thin.2efb89b1477e175330841061cd1990a8.svg",
-    "main.1949369e.css.map": "/bonjour-residences/static/css/main.1949369e.css.map",
-    "main.d0fd295e.js.map": "/bonjour-residences/static/js/main.d0fd295e.js.map"
+    "static/media/icons8-close.svg": "/bonjour-residences/static/media/icons8-close.e302745f1ceb591b89558fcee9c7820b.svg",
+    "static/media/icons8-menu.svg": "/bonjour-residences/static/media/icons8-menu.a7eceb4bb2c3351a402b72011dae00f1.svg",
+    "main.8f1175e3.css.map": "/bonjour-residences/static/css/main.8f1175e3.css.map",
+    "main.3fc37c82.js.map": "/bonjour-residences/static/js/main.3fc37c82.js.map"
   },
   "entrypoints": [
-    "static/css/main.1949369e.css",
-    "static/js/main.d0fd295e.js"
+    "static/css/main.8f1175e3.css",
+    "static/js/main.3fc37c82.js"
   ]
 }
