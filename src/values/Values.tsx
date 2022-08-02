@@ -1,4 +1,6 @@
+import { useAtom } from "jotai";
 import React from "react";
+import { isMobileAtom } from "../App";
 
 const cardValues = [
   {
@@ -30,12 +32,13 @@ const Card = ({
   description: string;
   title: string;
 }) => {
+  const [isMobile] = useAtom(isMobileAtom);
   return (
     <div
       style={{
         backgroundColor: "#CCECEC",
-        width: "42%",
-        padding: "3%",
+        width: isMobile ? "calc(100% - 60px )" : "42%",
+        padding: isMobile ? 30 : "3%",
         borderRadius: "10px",
         margin: "20px auto",
       }}
@@ -43,6 +46,8 @@ const Card = ({
       <h2
         style={{
           fontFamily: "SuisseEDUIntlMedium",
+          fontWeight: isMobile ? "bold" : "normal",
+          fontSize: isMobile ? 30 : undefined,
           paddingTop: 10,
           marginTop: 0,
           marginBottom: 0,
@@ -50,14 +55,26 @@ const Card = ({
       >
         {title}
       </h2>
-      <p>{description}</p>
+      <p
+        style={{
+          fontSize: isMobile ? 20 : undefined,
+        }}
+      >
+        {description}
+      </p>
     </div>
   );
 };
 
 export const Values = () => {
+  const [isMobile] = useAtom(isMobileAtom);
   return (
-    <aside style={{ display: "flex" }}>
+    <aside
+      style={{
+        display: "flex",
+        flexDirection: isMobile ? "column" : "row",
+      }}
+    >
       <div
         style={{
           flex: 1,
@@ -67,11 +84,16 @@ export const Values = () => {
           style={{
             marginTop: 10,
             marginBottom: 0,
+            fontWeight: isMobile ? "bold" : "normal",
           }}
         >
           Les valeurs qui nous tiennent à coeur
         </h2>
-        <p>
+        <p
+          style={{
+            fontSize: isMobile ? 20 : undefined,
+          }}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu
           tortor interdum, aliquet arcu sit amet, dignissim lectus. Sed
           convallis, augue sed porta accumsan, quam libero efficitur ex, at
@@ -81,9 +103,9 @@ export const Values = () => {
       </div>
       <div
         style={{
-          flex: 2,
+          flex: isMobile ? 1 : 2,
           display: "flex",
-          flexFlow: "row wrap",
+          flexFlow: isMobile ? "column nowrap" : "row wrap",
           justifyContent: "space-between",
           alignContent: "space-between",
         }}
