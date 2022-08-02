@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { atom, useAtom } from "jotai";
+import { CSSProperties, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ReactComponent as BonjourResidencesLogo } from "../lib/svgs/LOGOS-BONJOUR-RESIDENCES-2021-03.svg";
+import { isMobileAtom } from "../App";
+import { ReactComponent as Cross } from "../lib/svgs/icons8-close.svg";
+import { ReactComponent as Hamburger } from "../lib/svgs/icons8-menu.svg";
+import { Logo } from "./Logo";
 
+const isOpenAtom = atom(false);
 const links = [
   {
     to: "/rechercher-residences",
@@ -21,36 +26,50 @@ const links = [
   },
 ];
 
-export const Header = () => {
+function Menu({ isMobile }: { isMobile: boolean }) {
+  const [isOpen, setIsOpen] = useAtom(isOpenAtom);
   return (
-    <header
+    <button
       style={{
-        display: "flex",
-        alignItems: "center",
-        borderBottom: "1px solid #d6dadc",
+        backgroundColor: "transparent",
+        border: "none",
+        outline: "none",
+        cursor: "pointer",
+        float: "right", // width: isMobile ? "100%" : "auto",
       }}
+      onClick={() => setIsOpen(!isOpen)}
     >
-      <Logo />
-      <Navigation />
-    </header>
+      {isOpen ? <Cross /> : <Hamburger />}
+    </button>
+  );
+}
+
+export const Header = () => {
+  const [isMobile] = useAtom(isMobileAtom);
+  const [isOpen] = useAtom(isOpenAtom);
+  return (
+    <>
+      <header
+        style={{
+          position: isMobile ? "fixed" : "static",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: isMobile ? "space-between" : "inherit",
+          borderBottom: "1px solid #d6dadc",
+          backgroundColor: "#FFFFFF",
+          height: isMobile ? 80 : "auto",
+          width: "100%",
+          zIndex: 100,
+        }}
+      >
+        <Logo />
+        {isMobile ? <Menu isMobile /> : <Navigation />}
+      </header>
+      {isOpen && <Navigation />}
+    </>
   );
 };
 
-export const Logo = () => {
-  return (
-    <BonjourResidencesLogo
-      style={{
-        maxWidth: 200,
-        width: "10%",
-        padding: "15 30",
-        minWidth: 100,
-        maxHeight: 60,
-        height: 60,
-        marginRight: 100,
-      }}
-    />
-  );
-};
 export const HeaderLink = (link: { to: string; label: string }) => {
   const { to, label } = link;
   const { pathname } = useLocation();
@@ -78,8 +97,26 @@ export const HeaderLink = (link: { to: string; label: string }) => {
 };
 
 export const Navigation = () => {
+  const [isOpen] = useAtom(isOpenAtom);
+  const styleForMobile = (bool: boolean): CSSProperties => {
+    return bool
+      ? {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          justifyContent: "flex-start",
+          position: "fixed",
+          top: 70,
+          left: 0,
+          width: "100%",
+          height: "auto",
+          backgroundColor: "#FFFFFF",
+          zIndex: 100,
+        }
+      : {};
+  };
   return (
-    <nav>
+    <nav style={{ ...styleForMobile(isOpen) }}>
       {links.map((link, index) => (
         <HeaderLink key={index} {...link} />
       ))}

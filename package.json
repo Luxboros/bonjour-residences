@@ -1,6 +1,6 @@
 {
   "name": "bonjour_residences",
-  "homepage": "hhtps://tmtlsdw.github.io/bonjour-residences/",
+  "homepage": "https://tmtlsdw.github.io/bonjour-residences/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "gh-pages": "^4.0.0",
+    "jotai": "^1.7.7",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
