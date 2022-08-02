@@ -22,6 +22,7 @@ function App() {
     };
 
     windowMediaQuery.addEventListener("change", updateWindowMediaQuery);
+    console.log(isMobile);
     return () => {
       windowMediaQuery.removeEventListener("change", updateWindowMediaQuery);
     };

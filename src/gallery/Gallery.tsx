@@ -65,7 +65,7 @@ const Image = ({ src, alt }: ImageProps) => {
             position: "absolute",
             display: "flex",
             flexDirection: "column",
-            width: "100%",
+            width: isMobile ? "100%" : "90%",
             height: "99%",
             backgroundColor: "#35404EDD",
             borderRadius: 10,
@@ -94,7 +94,7 @@ const Image = ({ src, alt }: ImageProps) => {
       <img
         style={{
           borderRadius: 10,
-          width: "100%",
+          width: isMobile ? "100%" : "90%",
           height: "100%",
         }}
         src={src}
