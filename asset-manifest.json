@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/bonjour-residences/static/css/main.1949369e.css",
+    "main.js": "/bonjour-residences/static/js/main.d0fd295e.js",
+    "static/media/CB-06189.jpg": "/bonjour-residences/static/media/CB-06189.464049de7a5665d1699c.jpg",
+    "static/media/CB-09487.jpg": "/bonjour-residences/static/media/CB-09487.f973e572f720872d578c.jpg",
+    "static/media/Casual-seniors-441520.jpg": "/bonjour-residences/static/media/Casual-seniors-441520.585c5a719ed2265d8bef.jpg",
+    "static/media/creativebox-fff-09233.jpg": "/bonjour-residences/static/media/creativebox-fff-09233.7ff42a900e0d7301e061.jpg",
+    "static/media/20191115_193621.jpg": "/bonjour-residences/static/media/20191115_193621.637a24cef2c7edb58e0f.jpg",
+    "static/media/Cheerful-creative-team-working-in-542481.jpg": "/bonjour-residences/static/media/Cheerful-creative-team-working-in-542481.ea7c4e688fdc346483f5.jpg",
+    "static/media/CB-08812.jpg": "/bonjour-residences/static/media/CB-08812.c09264756f2c855252ce.jpg",
+    "static/media/Portraits-14.jpg": "/bonjour-residences/static/media/Portraits-14.7f4fde1f04eae40b56fa.jpg",
+    "static/media/SuisseEDUIntl-Medium-WebS.woff": "/bonjour-residences/static/media/SuisseEDUIntl-Medium-WebS.b9c7c32d164e050a8e7e.woff",
+    "static/media/SuisseEDUIntl-BoldItalic-WebS.woff": "/bonjour-residences/static/media/SuisseEDUIntl-BoldItalic-WebS.0f180274960718ddd576.woff",
+    "static/media/SuisseEDUIntl-RegularItalic-WebS.woff": "/bonjour-residences/static/media/SuisseEDUIntl-RegularItalic-WebS.0bd33ee7c62e4f3ba588.woff",
+    "static/media/SuisseEDUIntl-Bold-WebS.woff": "/bonjour-residences/static/media/SuisseEDUIntl-Bold-WebS.c71b092209e7e54569e0.woff",
+    "static/media/SuisseEDUIntl-Light-WebS.woff": "/bonjour-residences/static/media/SuisseEDUIntl-Light-WebS.342246a94c1592ca4d41.woff",
+    "static/media/SuisseEDUIntl-Thin-WebS.woff": "/bonjour-residences/static/media/SuisseEDUIntl-Thin-WebS.ba13d55cf8f796c50882.woff",
+    "static/media/SuisseEDUIntl-Regular-WebS.woff": "/bonjour-residences/static/media/SuisseEDUIntl-Regular-WebS.27b60fdb5d5d66bf1770.woff",
+    "static/media/SuisseEDUIntl-RegularItalic-WebS.woff2": "/bonjour-residences/static/media/SuisseEDUIntl-RegularItalic-WebS.68b0098309828124267c.woff2",
+    "static/media/SuisseEDUIntl-Medium-WebS.woff2": "/bonjour-residences/static/media/SuisseEDUIntl-Medium-WebS.e551ec84df43eccf0199.woff2",
+    "static/media/SuisseEDUIntl-BoldItalic-WebS.woff2": "/bonjour-residences/static/media/SuisseEDUIntl-BoldItalic-WebS.10ce83383497c3fe39bd.woff2",
+    "static/media/SuisseEDUIntl-Light-WebS.woff2": "/bonjour-residences/static/media/SuisseEDUIntl-Light-WebS.a656f33776629aab357e.woff2",
+    "static/media/SuisseEDUIntl-Bold-WebS.woff2": "/bonjour-residences/static/media/SuisseEDUIntl-Bold-WebS.3ba5788c4a875a24e787.woff2",
+    "static/media/SuisseEDUIntl-Thin-WebS.woff2": "/bonjour-residences/static/media/SuisseEDUIntl-Thin-WebS.4e8405c54a2e28ab95bb.woff2",
+    "static/media/SuisseEDUIntl-Regular-WebS.woff2": "/bonjour-residences/static/media/SuisseEDUIntl-Regular-WebS.d25392e44b14f002a043.woff2",
+    "static/media/LOGOS-BONJOUR-RESIDENCES-2021-03.svg": "/bonjour-residences/static/media/LOGOS-BONJOUR-RESIDENCES-2021-03.36f5502c00f74723cb01740cae442e4d.svg",
+    "static/media/camera-thin.svg": "/bonjour-residences/static/media/camera-thin.50356fdb289904e1f284a8953c39bbf5.svg",
+    "index.html": "/bonjour-residences/index.html",
+    "static/media/circle-play-solid.svg": "/bonjour-residences/static/media/circle-play-solid.e9088c48b8b9128b5703fc53b9784bc1.svg",
+    "static/media/arrow-right-long-thin.svg": "/bonjour-residences/static/media/arrow-right-long-thin.2efb89b1477e175330841061cd1990a8.svg",
+    "main.1949369e.css.map": "/bonjour-residences/static/css/main.1949369e.css.map",
+    "main.d0fd295e.js.map": "/bonjour-residences/static/js/main.d0fd295e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1949369e.css",
+    "static/js/main.d0fd295e.js"
+  ]
+}
