@@ -1,7 +1,10 @@
+import { useAtom } from "jotai";
 import React from "react";
 import { Link } from "react-router-dom";
+import { isMobileAtom } from "../App";
 
 export const Footer = () => {
+  const [isMobile] = useAtom(isMobileAtom);
   return (
     <div
       style={{
@@ -14,8 +17,8 @@ export const Footer = () => {
     >
       <footer
         style={{
-          marginTop: 150,
-          marginBottom: 200,
+          marginTop: isMobile ? undefined : 150,
+          marginBottom: isMobile ? undefined : 200,
         }}
       >
         <p

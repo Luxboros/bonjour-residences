@@ -134,6 +134,14 @@ p {
 		padding: 0 30px;
 
 	}
+
+	footer > p {
+		color: rgb(164, 169, 173);
+	}
+
+	footer > p:last-of-type {
+		margin-bottom: 0px;
+	}
 }
 
 
